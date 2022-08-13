@@ -2,9 +2,15 @@
 //
 
 #include <iostream>
+#include "StringBad.h"
 
 int main()
 {
+	StringBad st1("12345");
+	StringBad st2 = st1; //进入自定义的深拷贝构造函数
+	StringBad st3;
+	st3 = st1; //测试过这边不会走到自定义的拷贝构造函数，这里是赋值，由于成员变量还有指针，需要和深拷贝构造一样，进行重载，重载和拷贝构造一样都是赋值
+
     std::cout << "Hello World!\n";
 }
 

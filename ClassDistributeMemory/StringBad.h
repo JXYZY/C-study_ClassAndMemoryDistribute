@@ -3,7 +3,7 @@
 class StringBad
 {
 public:
-	explicit StringBad(const char * s);
+	StringBad(const char * s);
 	StringBad(const StringBad&);
 	StringBad();
 	~StringBad();

@@ -10,8 +10,9 @@ public:
 
 	//重载=
 	StringBad & operator=(const StringBad&);
-
+	static int HowMany();
 private:
 	char* m_str;
 	int m_len;  //字符串长度，出去尾0
+	static int num_string;
 };

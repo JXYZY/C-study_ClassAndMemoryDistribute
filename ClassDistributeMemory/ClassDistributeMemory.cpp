@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "StringBad.h"
+#include "Queue.h"
 
 int main()
 {
@@ -14,6 +15,10 @@ int main()
 	st3 = st1; //测试过这边不会走到自定义的拷贝构造函数，这里是赋值，由于成员变量还有指针，需要和深拷贝构造一样，进行重载，重载和拷贝构造一样都是赋值
 	st4 = "123";//这边会先走构造函数，转换函数为构造函数，构造一个临时对象，然后再将临时对象赋值给st4,所以对象如果有指针，这里还是要重写赋值进行深拷贝。
 #endif
+
+	//测试队列
+	Queue qu1(5);
+	//Queue qu2 = qu1;
 
     std::cout << "Hello World!\n";
 }
